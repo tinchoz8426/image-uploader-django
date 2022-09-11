@@ -1,0 +1,29 @@
+{% extends 'app_image/base.html' %}
+
+{% block content %}
+
+<div class="contact-box">
+    <div class="left"></div>
+    <div class="right">
+        <h2 class="mt-5 text-center">Ponte en contacto</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+        
+            <input required type="text" class="field" name="name" id="" placeholder="Nombre">
+            <input required type="email" class="field" name="email" id="" placeholder="Correo electrónico">
+            <input required type="text" class="field" name="subject" id="" placeholder="Asunto">
+            <textarea required class="field" name="message" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+        
+            <input type="submit" class="btn-contact" value="Enviar">
+        </form>
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-success mt-2" role="alert">
+                {{message}}
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

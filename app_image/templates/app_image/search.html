@@ -1,0 +1,21 @@
+{% extends 'app_image/base.html' %}
+
+{% block content %}
+<h1>Busqueda</h1>
+<div class="row">
+    {% if image_object %}
+    <div class="col-4 mb-5 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <img src="{{image_object.photo.url}}" class="card-img-top" alt="{{image.id}}">
+            <h5 class="card-title text-center">{{image_object.name}}</h5>
+
+            <div class="card-footer">
+                <small>{{image_object.date}}</small>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    {{mensaje}}
+    {% endif %}
+</div>
+{% endblock %}

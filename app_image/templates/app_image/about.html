@@ -1,0 +1,22 @@
+{% extends 'app_image/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="d-flex flex-column align-items-center">
+    <h1 class="text-center mt-5">Hola, 👋 soy Martín</h1>
+    <p class="description-text">Actualmente desempeñándome como desarrollador web Front end de manera freelance. A su
+        vez dedicándome a la educación, donde imparto cursos de Python y desarrollo web. Soy tranquilo, naturalmente
+        curioso y trabajo constantemente para mejorar mis habilidades.</p>
+    <h2 class="text-center">Me podes encontrar en</h2>
+    <ul class="icons">
+        <li><a href="#"><span class="bi bi-github"></span></a></li>
+        <li><a href="#"><span class="bi bi-linkedin"></span></a></li>
+        <li><a href="#"><span class="bi bi-youtube"></span></a></li>
+        <li><a href="#"><span class="bi bi-twitter"></span></a></li>
+    </ul>
+    <img class="img-fluid" src="{% static 'app_image/images/profile.png' %}" alt="Portfolio" width="500">
+</div>
+
+
+{% endblock %}
