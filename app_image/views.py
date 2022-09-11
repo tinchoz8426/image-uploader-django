@@ -5,11 +5,16 @@ from django.conf import settings
 from django.contrib import messages
 from django.views.generic import TemplateView
 
+from image_uploader.settings import STATIC_ROOT, STATICFILES_DIRS
+
 from .models import Image
 from .forms import ImageForm
 
 # Create your views here.
 def home(request):
+
+    print(STATIC_ROOT)
+    print(STATICFILES_DIRS)
     images = Image.objects.all()
 
     print(request.method) # Imprimo para ver que tipo de metodo es
